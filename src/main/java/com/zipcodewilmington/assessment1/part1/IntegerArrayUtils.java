@@ -21,7 +21,7 @@ public class IntegerArrayUtils {
      * @return the product of `intArray`
      */
     public static Integer getProduct(Integer[] intArray) {
-
+        // need to get factorial for integers in the array
         return null;
     }
 
@@ -29,7 +29,14 @@ public class IntegerArrayUtils {
      * @param intArray an array of integers
      * @return the sum of `intArray` divided by number of elements in `intArray`
      */
+    // need to find the sum of the arrays first for each loop with counter
+    // then get average of sum of array divide by array length?
     public static Double getAverage(Integer[] intArray) {
-        return null;
+
+        Double  sum = 0.0;
+        for(int i : intArray){
+            sum += i;
+        }
+        return sum /intArray.length;
     }
 }
