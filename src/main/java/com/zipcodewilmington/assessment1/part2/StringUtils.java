@@ -35,7 +35,13 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String temp = "";
+        temp = sentence.substring(0, sentence.indexOf(" "));
+        StringBuilder answer = new StringBuilder(temp);
+        answer.reverse().toString();
+
+
+        return String.valueOf(answer);
     }
 
     /**
