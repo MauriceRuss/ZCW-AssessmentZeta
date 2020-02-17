@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -10,14 +12,18 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-       /* Integer[] answer = new Integer[ints.length-1];
+        /*Integer[] answer = new Integer[ints.length-1];
+        Integer[] result = new Integer[answer.length-1];
         int count = 0;
         for(int q= 0; q < ints.length; q++){
             if(ints[q] % 2 != 0){
                 answer[count++] = ints[q];
-                System.out.println(count);
+                System.out.println(ints[q]);
+                result[q] = ints[q];
+
             }
         }*/
+
 
 
 
