@@ -29,8 +29,11 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-
-        return null;
+        StringBuilder tempString = new StringBuilder(str);
+        StringBuilder revString = tempString.reverse();
+        String temp2 = revString.toString();
+        String answer = temp2.substring(0,1).toUpperCase() + temp2.substring(1);
+        return answer;
     }
 
 
