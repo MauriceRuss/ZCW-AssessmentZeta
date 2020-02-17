@@ -23,7 +23,10 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String answer = "";
+        answer = sentence.substring(0, sentence.indexOf(" "));
+
+        return answer;
     }
 
     /**
