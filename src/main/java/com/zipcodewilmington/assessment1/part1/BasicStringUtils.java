@@ -39,7 +39,9 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        String answer = "";
+        answer = str.substring(1,str.length()-1);
+        return answer;
     }
 
     /**
@@ -47,6 +49,7 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
+
         return null;
     }
 }
