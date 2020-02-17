@@ -27,14 +27,15 @@ public class BasicArrayUtils {
      */
     public static String getLastElement(String[] stringArray) {
 
-        return stringArray[stringArray-1];
+        return null ;//stringArray[stringArray-1];
     }
 
     /**
      * @param stringArray an array of String objects
      * @return the second to last element in the array
      */
-    public static String getSecondToLastElement(String[] stringArray)
-    return stringArray[stringArray-2];
+    public static String getSecondToLastElement(String[] stringArray) {
+    //return stringArray[stringArray-2];
+    return null;
     }
 }
