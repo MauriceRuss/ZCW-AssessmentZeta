@@ -12,7 +12,8 @@ public class IntegerUtils {
      */
     public static Integer getSumOfN(Integer n) {
 
-        return n;
+
+        return null;
     }
 
     /**
