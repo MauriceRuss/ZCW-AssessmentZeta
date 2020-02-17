@@ -10,6 +10,17 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
+       /* Integer[] answer = new Integer[ints.length-1];
+        int count = 0;
+        for(int q= 0; q < ints.length; q++){
+            if(ints[q] % 2 != 0){
+                answer[count++] = ints[q];
+                System.out.println(count);
+            }
+        }*/
+
+
+
         return null;
     }
 

@@ -27,6 +27,16 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
+        /*Object [] answerArray = new Object[][objectArray.length-1];
+        int counter = 0;
+        for(Object i : objectArray){}
+        if(!i == objectToRemove){
+            answerArray[counter++] = i;
+        }
+        }
+        ;
+        }*/
+
         return null;
     }
 
@@ -56,6 +66,9 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+       /* Integer  ObArLen = objectArray.length;
+        Integer ObArrToAddLen = objectArrayToAdd.length;
+        Object[] answer = new Object[ ObArLen + ObArrToAddLen];*/
         return null;
     }
 }
