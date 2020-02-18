@@ -23,12 +23,28 @@ public class MultiplesDeleter {
 
             }
         }*/
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i]%2 == 0){
+                ints[i] = 0;
+            }
+        }
+        Integer occ = ArrayUtils.getNumberOfOccurrences(ints,  0);
+        Integer [] result = new Integer[ints.length - occ];
+        int k = 0;
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] != 0){
+                result[k] = ints[i];
+                k++;
+        }
 
+        }
+            return result;
 
-
-
-        return null;
     }
+
+
+
+
 
     /**
      * @param ints array of Integer objects
@@ -36,7 +52,23 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i]%2 == 1){
+                ints[i] = 0;
+            }
+        }
+        Integer occ = ArrayUtils.getNumberOfOccurrences(ints,  0);
+        Integer [] result = new Integer[ints.length - occ];
+        int k = 0;
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] != 0){
+                result[k] = ints[i];
+                k++;
+            }
+
+        }
+        return result;
+        //return null;
     }
 
     /**
@@ -45,8 +77,14 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
-    }
+        for (int i = 0; i < ints.length; i++) {
+            if (ints[i] % 3 == 0) {
+                ints[i] = 0;
+            }
+            System.out.println(i);
+        }
+            return null;
+        }
 
     /**
      * @param ints array of Integer objects

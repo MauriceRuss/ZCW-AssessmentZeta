@@ -15,7 +15,8 @@ public class IntegerArrayUtils {
         }
         return answerSum;*/
         Integer s = 0;
-        for(Integer i : intArray) s += i;
+        for(Integer i : intArray)
+            s += i;
             return s;
     }
 

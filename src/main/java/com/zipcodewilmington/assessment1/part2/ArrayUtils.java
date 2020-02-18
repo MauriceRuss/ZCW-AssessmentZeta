@@ -13,18 +13,19 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        /*Integer counter = 0;
-        for(int q = 0; q < objectArray.length; q++){
-            if(objectArray[q] == objectToCount)
-                counter++;
-        }
-
-        return counter;*/
+//        Integer counter = 0;
+//        for(int q = 0; q < objectArray.length; q++){
+//            if(objectArray[q] == objectToCount)
+//                counter++;
+//        }
+//
+//        return counter;
         int n = 0;
         for(Object to : objectArray){
             if(to.equals(objectToCount))
                 n += 1;
         }
+        System.out.println(n);
         return  n;
     }
 
@@ -61,7 +62,19 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+            int max = 0;
+            int occ = 0;
+            Object result = null;
+            for(Object to : objectArray){
+                occ = getNumberOfOccurrences(objectArray, to);
+                if(occ > max){
+                    max = occ;
+                    result= to;
+                }
+            }
+
+
+        return result;
     }
 
 
@@ -71,7 +84,21 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
-        return null;
+        int min = objectArray.length;//Integer.MAX_VALUE;
+        int occ = 0;
+        Object result = null;
+        for(Object to : objectArray){
+            occ = getNumberOfOccurrences(objectArray, to);
+            if(occ < min){
+                min = occ;
+                result= to;
+            }
+        }
+
+
+        return result;
+
+
     }
 
     /**
@@ -84,6 +111,16 @@ public class ArrayUtils {
        /* Integer  ObArLen = objectArray.length;
         Integer ObArrToAddLen = objectArrayToAdd.length;
         Object[] answer = new Object[ ObArLen + ObArrToAddLen];*/
-        return null;
+
+       ArrayList<Object> result = new ArrayList<>();
+       for(Object to : objectArray){
+           result.add(to);
+       }
+       for(Object to : objectArrayToAdd){
+           result.add(to);
+       }
+       Integer[] array = result.toArray(new Integer[objectArray.length + objectArrayToAdd.length]);
+
+        return array;
     }
 }
