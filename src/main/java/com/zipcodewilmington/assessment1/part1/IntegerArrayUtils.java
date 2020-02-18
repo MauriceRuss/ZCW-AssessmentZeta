@@ -9,11 +9,14 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
-        int answerSum = 0;
-        for(int q = 0; q < intArray.length; q++){
+        /*int answerSum = 0;
+        for (int q = 0; q < intArray.length; q++) {
             answerSum += intArray[q];
         }
-        return answerSum;
+        return answerSum;*/
+        Integer s = 0;
+        for(Integer i : intArray) s += i;
+            return s;
     }
 
     /**
@@ -22,7 +25,11 @@ public class IntegerArrayUtils {
      */
     public static Integer getProduct(Integer[] intArray) {
         // need to get factorial for integers in the array
-        return null;
+        Integer s = 1;
+        for (Integer i : intArray)
+            s *= i;
+
+        return s;
     }
 
     /**
@@ -33,10 +40,12 @@ public class IntegerArrayUtils {
     // then get average of sum of array divide by array length?
     public static Double getAverage(Integer[] intArray) {
 
-        Double  sum = 0.0;
+       /*Double  sum = 0.0;
         for(int i : intArray){
             sum += i;
         }
         return sum /intArray.length;
+    }*/
+        return Double.valueOf((getSum(intArray) / intArray.length));
     }
 }

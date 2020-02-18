@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,13 +13,19 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        Integer counter = 0;
+        /*Integer counter = 0;
         for(int q = 0; q < objectArray.length; q++){
             if(objectArray[q] == objectToCount)
                 counter++;
         }
 
-        return counter;
+        return counter;*/
+        int n = 0;
+        for(Object to : objectArray){
+            if(to.equals(objectToCount))
+                n += 1;
+        }
+        return  n;
     }
 
     /**
@@ -36,8 +44,15 @@ public class ArrayUtils {
         }
         ;
         }*/
+        ArrayList<Object> tmp = new ArrayList<>();
+        for(Object to : objectArray){
+            if(!to.equals(objectToRemove))
+                tmp.add(to);
+        }
+        Integer[] foo = new Integer[tmp.size()];
 
-        return null;
+        return tmp.toArray(foo);
+
     }
 
     /**
