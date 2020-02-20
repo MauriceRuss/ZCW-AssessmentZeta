@@ -25,7 +25,7 @@ public class ArrayUtils {
             if(to.equals(objectToCount))
                 n += 1;
         }
-        System.out.println(n);
+
         return  n;
     }
 

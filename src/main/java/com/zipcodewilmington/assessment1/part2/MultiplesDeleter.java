@@ -52,23 +52,35 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
+//        for(int i = 0; i < ints.length; i++){
+//            if(ints[i]%2 == 1){
+//                ints[i] = 0;
+//            }
+//        }
+//        Integer occ = ArrayUtils.getNumberOfOccurrences(ints,  0);
+//        Integer [] result = new Integer[ints.length - occ];
+//        int k = 0;
+//        for(int i = 0; i < ints.length; i++){
+//            if(ints[i] != 0){
+//                result[k] = ints[i];
+//                k++;
+//            }
+//
+//        }
+//        return result;
+        Integer[] evenNum = new Integer[ints.length];
+        int n = 0;
         for(int i = 0; i < ints.length; i++){
-            if(ints[i]%2 == 1){
-                ints[i] = 0;
+            if(ints[i]%2 == 0){
+                evenNum[n] = ints[i];
+                n++;
             }
         }
-        Integer occ = ArrayUtils.getNumberOfOccurrences(ints,  0);
-        Integer [] result = new Integer[ints.length - occ];
-        int k = 0;
-        for(int i = 0; i < ints.length; i++){
-            if(ints[i] != 0){
-                result[k] = ints[i];
-                k++;
-            }
-
+            Integer[] newArr = new Integer[n];
+        for(int j = 0; j < n; j++){
+            newArr[j]= evenNum[j];
         }
-        return result;
-
+        return newArr;
     }
 
     /**
