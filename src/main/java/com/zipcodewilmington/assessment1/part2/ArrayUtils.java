@@ -36,25 +36,31 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        /*Object [] answerArray = new Object[][objectArray.length-1];
+        Object [] answerArray = new Object[objectArray.length];
         int counter = 0;
-        for(Object i : objectArray){}
-        if(!i == objectToRemove){
-            answerArray[counter++] = i;
+        for(Object i : objectArray){
+        if(!i.equals(objectToRemove)){
+            answerArray[counter] = i;
+            counter++;
         }
         }
-        ;
-        }*/
-        ArrayList<Object> tmp = new ArrayList<>();
-        for(Object to : objectArray){
-            if(!to.equals(objectToRemove))
-                tmp.add(to);
+        Integer[] newAnsArr = new Integer[counter];
+        for(int j = 0; j < counter; j++){
+            newAnsArr[j] = (Integer) answerArray[j];
         }
-        Integer[] foo = new Integer[tmp.size()];
+            return newAnsArr;
+        }
 
-        return tmp.toArray(foo);
+//        ArrayList<Object> tmp = new ArrayList<>();
+//        for(Object to : objectArray){
+//            if(!to.equals(objectToRemove))
+//                tmp.add(to);
+//        }
+//        Integer[] foo = new Integer[tmp.size()];
+//
+//        return tmp.toArray(foo);
+//
 
-    }
 
     /**
      * @param objectArray an array of any type of Object
